@@ -72,6 +72,46 @@ font-size:20px;
 margin-top:10px;
 }
 </style>
+  <!-- Floating Balloons -->
+<style>
+.balloon{
+position:fixed;
+bottom:-120px;
+width:60px;
+height:80px;
+border-radius:50%;
+animation:floatUp 12s linear infinite;
+opacity:.8;
+z-index:1;
+}
+
+.balloon::after{
+content:"";
+position:absolute;
+width:2px;
+height:60px;
+background:white;
+left:50%;
+top:80px;
+}
+
+.b1{left:8%;background:#ff4d6d;}
+.b2{left:25%;background:#ffd93d;animation-delay:2s;}
+.b3{left:45%;background:#4da6ff;animation-delay:4s;}
+.b4{left:65%;background:#7bed9f;animation-delay:1s;}
+.b5{left:85%;background:#ff66cc;animation-delay:3s;}
+
+@keyframes floatUp{
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);}
+}
+</style>
+
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+<div class="balloon b5"></div>
 
 </head>
 
