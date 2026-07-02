@@ -62,4 +62,25 @@ font-weight:bold;
 animation:fadeIn 1s;
 }
 
-@key
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h1>Happy Birthday Tang! ❤️</h1>
+  <p>Wishing you all the happiness in the world!</p>
+  <button onclick="showMsg()">Click for Surprise</button>
+  <div id="msg">You are the most special person! 💖</div>
+</div>
+
+<script>
+function showMsg() {
+  document.getElementById('msg').style.display = 'block';
+}
+</script>
+</body>
+</html>
