@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  background: linear-gradient(-45deg, #000, #1a1a40, #000);
+  background-size: 400% 400%;
+  animation: bg 10s infinite;
+}
+
+@keyframes bg {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+.container {
+  margin-top: 120px;
+  z-index: 2;
+  position: relative;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: none;
+}
