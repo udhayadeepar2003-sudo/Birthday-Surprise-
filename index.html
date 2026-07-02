@@ -1,24 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ultimate Birthday Surprise</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aarthika ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#89f7fe);
+background-size:400% 400%;
+animation:bg 12s infinite alternate;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+.container{
+text-align:center;
+z-index:10;
+}
+
+button{
+padding:18px 40px;
+font-size:24px;
+border:none;
+border-radius:50px;
+background:#ff4081;
+color:white;
+cursor:pointer;
+box-shadow:0 0 20px #ff4081;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#surprise{
+display:none;
+}
+
+img{
+width:260px;
+border-radius:25px;
+box-shadow:0 0 30px white;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+h1{
+margin-top:20px;
+font-size:42px;
+color:white;
+text-shadow:0 0 20px hotpink;
+}
+
+p{
+font-size:22px;
+color:white;
+margin-top:10px;
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="container">
+<div class="container" id="welcome">
 
-  <h1 id="text">🎁 Click Start Surprise</h1>
-
-  <button onclick="start()">START</button>
-  <button onclick="playMusic()">🎵 Music</button>
-
-  <img id="photo">
+<button onclick="start()">🎁 Click Here 🎁</button>
 
 </div>
 
-<canvas id="canvas"></canvas>
+<div class="container" id="surprise">
 
-<script src="script.js"></script>
+<img src="aarthika.png">
+
+<h1>🎂 Happy Birthday Aarthika ❤️</h1>
+
+<p>May your life be filled with Happiness, Love & Success ✨</p>
+
+</div>
+
+<script>
+
+function start(){
+
+document.getElementById("welcome").style.display="none";
+
+document.getElementById("surprise").style.display="block";
+
+}
+
+</script>
+
 </body>
 </html>
