@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Aarthika 🎂</title>
+
+<title>Happy Birthday Aarthika ❤️</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -11,50 +13,104 @@
 
 <body>
 
+<!-- Background -->
 <div class="background"></div>
 
-<div id="welcome" class="screen">
+<!-- Welcome Screen -->
+<section id="welcome" class="screen">
 
-<div class="gift-box" onclick="openGift()">
+<div class="gift">
+
 🎁
-</div>
-
-<h2 class="tap-text">
-Tap the Gift 🎁
-</h2>
 
 </div>
 
-<div id="birthday" class="screen hidden">
+<h1 class="welcome-title">
 
-<div class="balloons">
+A Special Surprise
+
+</h1>
+
+<p class="tap">
+
+Tap the Gift to Open ❤️
+
+</p>
+
+<button class="open-btn" onclick="openGift()">
+
+Open Gift 🎁
+
+</button>
+
+</section>
+
+<!-- Birthday Screen -->
+
+<section id="birthday" class="screen hidden">
+
+<!-- Balloons -->
+
 <div class="balloon left1"></div>
 <div class="balloon left2"></div>
+
 <div class="balloon right1"></div>
 <div class="balloon right2"></div>
-</div>
 
-<img src="Aarthika.jpg" class="photo" alt="Aarthika">
+<!-- Image -->
 
-<h1 class="title">🎉 HAPPY BIRTHDAY 🎉</h1>
+<img src="Aarthika.jpg"
 
-<h2 class="name">Aarthika ❤️</h2>
+class="photo"
+
+alt="Birthday">
+
+<!-- Heading -->
+
+<h1 class="title">
+
+🎉 HAPPY BIRTHDAY 🎉
+
+</h1>
+
+<h2 class="name">
+
+Aarthika ❤️
+
+</h2>
 
 <p class="message">
-May your life be filled with Happiness,<br>
-Love, Success and Endless Smiles. 💖
+
+May your life be filled with Happiness,
+
+Love & Success Forever 💖
+
 </p>
+
+<!-- Fireworks -->
 
 <div id="fireworks"></div>
 
-<button class="replay" onclick="location.reload()">
-🔄 Replay
+<!-- Replay -->
+
+<button class="replay"
+
+onclick="location.reload()">
+
+Replay 🔄
+
 </button>
 
-</div>
+</section>
+
+<!-- Music -->
 
 <audio id="music" loop>
-<source src="birthday.mp3" type="audio/mpeg">
+
+<source src="birthday.mp3"
+
+type="audio/mpeg">
+
 </audio>
 
 <script src="script.js"></script>
