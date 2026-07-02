@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Aarthika ❤️</title>
+<title>Happy Birthday Aarthika</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -15,99 +14,92 @@ font-family:Arial,sans-serif;
 }
 
 body{
-overflow:hidden;
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#89f7fe);
+background:linear-gradient(-45deg,#8e44ad,#ff6ec7,#6dd5fa,#ffffff);
 background-size:400% 400%;
-animation:bg 12s infinite alternate;
+animation:bgMove 10s infinite alternate;
+overflow:hidden;
 }
 
-@keyframes bg{
+@keyframes bgMove{
 0%{background-position:0% 50%;}
 100%{background-position:100% 50%;}
 }
 
 .container{
 text-align:center;
-z-index:10;
 }
 
 button{
-padding:18px 40px;
-font-size:24px;
+padding:15px 35px;
+font-size:22px;
 border:none;
-border-radius:50px;
+border-radius:40px;
 background:#ff4081;
 color:white;
 cursor:pointer;
-box-shadow:0 0 20px #ff4081;
-transition:.3s;
 }
 
-button:hover{
-transform:scale(1.1);
-}
-
-#surprise{
+#birthday{
 display:none;
 }
 
 img{
-width:260px;
-border-radius:25px;
-box-shadow:0 0 30px white;
+width:250px;
+border-radius:20px;
+margin-bottom:20px;
 animation:float 3s infinite ease-in-out;
 }
 
 @keyframes float{
-0%,100%{transform:translateY(0);}
+0%{transform:translateY(0);}
 50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
 }
 
 h1{
-margin-top:20px;
-font-size:42px;
+font-size:40px;
 color:white;
-text-shadow:0 0 20px hotpink;
+text-shadow:0 0 15px hotpink;
 }
 
 p{
-font-size:22px;
 color:white;
+font-size:20px;
 margin-top:10px;
 }
-
 </style>
+
 </head>
 
 <body>
 
-<div class="container" id="welcome">
+<div class="container" id="home">
 
-<button onclick="start()">🎁 Click Here 🎁</button>
+<button onclick="openGift()">🎁 Click Here 🎁</button>
 
 </div>
 
-<div class="container" id="surprise">
+<div class="container" id="birthday">
 
-<img src="aarthika.png">
+<img src="aarthika.png" alt="Aarthika">
 
-<h1>🎂 Happy Birthday Aarthika ❤️</h1>
+<h1>🎂 Happy Birthday Aarthika 🎂</h1>
 
-<p>May your life be filled with Happiness, Love & Success ✨</p>
+<p>May your life be filled with Happiness, Love and Success ❤️</p>
 
 </div>
 
 <script>
 
-function start(){
+function openGift(){
 
-document.getElementById("welcome").style.display="none";
+document.getElementById("home").style.display="none";
 
-document.getElementById("surprise").style.display="block";
+document.getElementById("birthday").style.display="block";
 
 }
 
