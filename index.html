@@ -211,5 +211,32 @@ opacity:0;
 <div class="heart h1">❤️</div>
 <div class="heart h2">💖</div>
 <div class="heart h3">💕</div>
+  <!-- Music (Later add birthday.mp3 in same folder) -->
+<audio id="music" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Replay Button -->
+<div id="replayBox" style="display:none;position:fixed;bottom:30px;width:100%;text-align:center;">
+    <button onclick="location.reload()">🔄 Replay Surprise</button>
+</div>
+
+<script>
+function openGift(){
+
+    document.getElementById("home").style.display="none";
+    document.getElementById("birthday").style.display="block";
+
+    // Play music if available
+    const music=document.getElementById("music");
+    music.play().catch(()=>{});
+
+    // Show replay button after 8 seconds
+    setTimeout(()=>{
+        document.getElementById("replayBox").style.display="block";
+    },8000);
+
+}
+</script>
 </body>
 </html>
