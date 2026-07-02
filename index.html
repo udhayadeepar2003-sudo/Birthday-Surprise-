@@ -1,119 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aarthika</title>
 
-<title>Happy Birthday Aarthika ❤️</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-<link rel="stylesheet" href="style.css">
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#8e44ad,#ff6ec7,#6dd5fa,#ffffff);
+background-size:400% 400%;
+animation:bgMove 10s infinite alternate;
+overflow:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+.container{
+text-align:center;
+}
+
+button{
+padding:15px 35px;
+font-size:22px;
+border:none;
+border-radius:40px;
+background:#ff4081;
+color:white;
+cursor:pointer;
+}
+
+#birthday{
+display:none;
+}
+
+img{
+width:250px;
+border-radius:20px;
+margin-bottom:20px;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+h1{
+font-size:40px;
+color:white;
+text-shadow:0 0 15px hotpink;
+}
+
+p{
+color:white;
+font-size:20px;
+margin-top:10px;
+}
+</style>
 
 </head>
 
 <body>
 
-<!-- Background -->
-<div class="background"></div>
+<div class="container" id="home">
 
-<!-- Welcome Screen -->
-<section id="welcome" class="screen">
-
-<div class="gift">
-
-🎁
+<button onclick="openGift()">🎁 Click Here 🎁</button>
 
 </div>
 
-<h1 class="welcome-title">
+<div class="container" id="birthday">
 
-A Special Surprise
+<img src="Aarthika.jpg" alt="Aarthika">
 
-</h1>
+<h1>🎂 Happy Birthday Aarthika 🎂</h1>
 
-<p class="tap">
+<p>May your life be filled with Happiness, Love and Success ❤️</p>
 
-Tap the Gift to Open ❤️
+</div>
 
-</p>
+<script>
 
-<button class="open-btn" onclick="openGift()">
+function openGift(){
 
-Open Gift 🎁
+document.getElementById("home").style.display="none";
 
-</button>
+document.getElementById("birthday").style.display="block";
 
-</section>
+}
 
-<!-- Birthday Screen -->
+</script>
+<!-- Floating Balloons -->
+<style>
+.balloon{
+position:fixed;
+bottom:-120px;
+width:60px;
+height:80px;
+border-radius:50%;
+animation:floatUp 12s linear infinite;
+opacity:.8;
+z-index:1;
+}
 
-<section id="birthday" class="screen hidden">
+.balloon::after{
+content:"";
+position:absolute;
+width:2px;
+height:60px;
+background:white;
+left:50%;
+top:80px;
+}
 
-<!-- Balloons -->
+.b1{left:8%;background:#ff4d6d;}
+.b2{left:25%;background:#ffd93d;animation-delay:2s;}
+.b3{left:45%;background:#4da6ff;animation-delay:4s;}
+.b4{left:65%;background:#7bed9f;animation-delay:1s;}
+.b5{left:85%;background:#ff66cc;animation-delay:3s;}
 
-<div class="balloon left1"></div>
-<div class="balloon left2"></div>
+@keyframes floatUp{
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);}
+}
+</style>
 
-<div class="balloon right1"></div>
-<div class="balloon right2"></div>
+<div class="balloon b1"></div>
+<div class="balloon b2"></div>
+<div class="balloon b3"></div>
+<div class="balloon b4"></div>
+<div class="balloon b5"></div>
+  <style>
+.firework{
+position:fixed;
+width:8px;
+height:8px;
+border-radius:50%;
+background:yellow;
+animation:explode 2s infinite;
+}
 
-<!-- Image -->
+.f1{top:20%;left:20%;}
+.f2{top:30%;left:75%;animation-delay:1s;}
+.f3{top:60%;left:50%;animation-delay:2s;}
 
-<img src="Aarthika.jpg"
+@keyframes explode{
+0%{
+transform:scale(0);
+opacity:1;
+box-shadow:
+0 0 #fff,
+0 0 #ff0,
+0 0 #f0f,
+0 0 #0ff;
+}
 
-class="photo"
+100%{
+transform:scale(10);
+opacity:0;
+box-shadow:
+-50px -50px #ff0,
+50px -50px #ff69b4,
+-50px 50px #00e5ff,
+50px 50px #7cff00;
+}
+}
 
-alt="Birthday">
+.heart{
+position:fixed;
+bottom:-30px;
+font-size:28px;
+animation:heartUp 8s linear infinite;
+}
 
-<!-- Heading -->
+.h1{left:15%;animation-delay:0s;}
+.h2{left:40%;animation-delay:2s;}
+.h3{left:70%;animation-delay:4s;}
 
-<h1 class="title">
+@keyframes heartUp{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
 
-🎉 HAPPY BIRTHDAY 🎉
+<div class="firework f1"></div>
+<div class="firework f2"></div>
+<div class="firework f3"></div>
 
-</h1>
-
-<h2 class="name">
-
-Aarthika ❤️
-
-</h2>
-
-<p class="message">
-
-May your life be filled with Happiness,
-
-Love & Success Forever 💖
-
-</p>
-
-<!-- Fireworks -->
-
-<div id="fireworks"></div>
-
-<!-- Replay -->
-
-<button class="replay"
-
-onclick="location.reload()">
-
-Replay 🔄
-
-</button>
-
-</section>
-
-<!-- Music -->
-
+<div class="heart h1">❤️</div>
+<div class="heart h2">💖</div>
+<div class="heart h3">💕</div>
+<!-- Music (Later add birthday.mp3 in same folder) -->
 <audio id="music" loop>
-
-<source src="birthday.mp3"
-
-type="audio/mpeg">
-
+    <source src="birthday.mp3" type="audio/mpeg">
 </audio>
 
-<script src="script.js"></script>
+<!-- Replay Button -->
+<div id="replayBox" style="display:none;position:fixed;bottom:30px;width:100%;text-align:center;">
+    <button onclick="location.reload()">🔄 Replay Surprise</button>
+</div>
 
+<script>
+function openGift(){
+
+    document.getElementById("home").style.display="none";
+    document.getElementById("birthday").style.display="block";
+
+    // Play music if available
+    const music=document.getElementById("music");
+    music.play().catch(()=>{});
+
+    // Show replay button after 8 seconds
+    setTimeout(()=>{
+        document.getElementById("replayBox").style.display="block";
+    },8000);
+
+}
+</script>
 </body>
 </html>
