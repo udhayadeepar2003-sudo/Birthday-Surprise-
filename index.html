@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Happy Birthday Aarthika</title>
 
 <style>
@@ -31,21 +30,23 @@ position:relative;
 display:none;
 }
 
-img{
-width:250px;
+#slideImage{
+width:260px;
+max-width:85%;
 border-radius:20px;
 box-shadow:0 0 20px rgba(0,0,0,0.3);
+transition:opacity 1s ease;
 }
 
 h1{
-font-size:55px;
+font-size:45px;
 color:white;
 margin:20px;
 font-weight:bold;
 }
 
 p{
-font-size:22px;
+font-size:20px;
 color:white;
 padding:0 20px;
 }
@@ -63,10 +64,10 @@ cursor:pointer;
 .balloon{
 position:absolute;
 bottom:-100px;
-width:40px;
-height:55px;
+width:30px;
+height:40px;
 border-radius:50%;
-opacity:0.7;
+opacity:0.5;
 animation:rise 15s linear infinite;
 z-index:-1;
 }
@@ -74,20 +75,16 @@ z-index:-1;
 .balloon::after{
 content:'';
 position:absolute;
-width:2px;
-height:50px;
+width:1px;
+height:40px;
 background:white;
 left:50%;
-top:55px;
+top:40px;
 }
 
 @keyframes rise{
-0%{
-transform:translateY(0);
-}
-100%{
-transform:translateY(-120vh);
-}
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);}
 }
 </style>
 </head>
@@ -110,21 +107,67 @@ transform:translateY(-120vh);
 <div class="balloon" style="left:70%;background:#64b5f6;animation-delay:6s;"></div>
 <div class="balloon" style="left:90%;background:#ba68c8;animation-delay:8s;"></div>
 
-<img src="Aarthika.jpg" alt="Aarthika">
+<img id="slideImage" src="Aarthika.jpg" alt="Aarthika">
 
+<div id="birthdayText">
 <h1>🎂 Happy Birthday Aarthika 🎂</h1>
 
 <p>
 May your life be filled with Happiness,<br>
 Love ❤️ and Endless Smiles ✨
 </p>
+</div>
 
 </div>
 
 <script>
+
+const photos=[
+"Aarthika.jpg",
+"image1.png",
+"image2.png",
+"image3.png",
+"image4.png"
+];
+
+let current=0;
+
+function startSlideshow(){
+
+setInterval(function(){
+
+if(current < photos.length-1){
+
+current++;
+
+const img=document.getElementById("slideImage");
+
+img.style.opacity="0";
+
+setTimeout(function(){
+
+img.src=photos[current];
+
+img.style.opacity="1";
+
+},500);
+
+if(current>0){
+
+document.getElementById("birthdayText").style.display="none";
+
+}
+
+}
+
+},6400);
+
+}
+
 function openGift(){
 
 document.getElementById("home").style.display="none";
+
 document.getElementById("birthday").style.display="flex";
 
 var music=document.getElementById("music");
@@ -133,7 +176,10 @@ music.play().catch(function(error){
 console.log(error);
 });
 
+startSlideshow();
+
 }
+
 </script>
 
 </body>
